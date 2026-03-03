@@ -309,10 +309,10 @@ p {
   text-transform: uppercase;
 }
 
-.service-carousel .castle-card:hover .card-title {
+/* .service-carousel .castle-card:hover .card-title {
   background-color: var(--brand-blue-royal) !important;
   color: var(--brand-white) !important;
-}
+} */
 
 /* Container positioning for the arrows */
 .service-carousel.owl-carousel {
@@ -678,7 +678,7 @@ p {
   border: 2px solid var(--brand-navy);
   font-size: 0.85rem;
   padding: 10px 15px;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   border-radius: 20px;
   text-transform: uppercase;
 }
@@ -769,7 +769,7 @@ p {
   background-repeat: no-repeat;
 
   /* Push star to extreme right */
-background-position: right -70px bottom 0;
+background-position: right 50px bottom 0;
   background-size: 650px; /* adjust size if needed */
 
   opacity: 0.41;
