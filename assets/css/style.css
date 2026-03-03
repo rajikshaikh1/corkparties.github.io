@@ -276,6 +276,52 @@ p {
   color: var(--brand-white) !important;
 }
 
+/* Container positioning for the arrows */
+.service-carousel.owl-carousel {
+    position: relative;
+    padding: 0 40px; /* Space for the arrows */
+}
+
+/* Base style for both arrows */
+.service-carousel .owl-nav button.owl-prev,
+.service-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--brand-navy) !important;
+    color: var(--brand-white) !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50% !important;
+    font-size: 15px !important;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.service-carousel .owl-nav button.owl-prev {
+    left: 5px;
+}
+
+.service-carousel .owl-nav button.owl-next {
+    right: 5px;
+}
+
+.service-carousel .owl-nav button.owl-prev:hover,
+.service-carousel .owl-nav button.owl-next:hover {
+    background: var(--brand-gold) !important;
+    color: var(--brand-navy) !important;
+    transform: translateY(-50%) scale(1.1);
+}
+.service-carousel .owl-nav{
+  display: unset !important;
+}
+
+.service-carousel .owl-nav button:focus {
+    outline: none;
+}
 .owl-theme .owl-dots .owl-dot.active span {
   background: var(--brand-navy);
 }
