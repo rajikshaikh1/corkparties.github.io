@@ -418,8 +418,17 @@ p {
   color: var(--brand-navy) !important;
   transform: translateY(-2px);
 }
+.why-choose-us .col-md-6 > div {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
 
-/* --- FOOTER STYLES --- */
+.why-choose-us .col-md-6 > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+
 .fresh-glass-footer {
   background: linear-gradient(135deg, var(--brand-navy), var(--brand-blue-royal));
   padding: 60px 0 25px;
@@ -608,6 +617,25 @@ p {
 
   .footer-social-row {
     justify-content: center;
+  }
+  .service-carousel.owl-carousel {
+      padding: 0 !important;
+      margin: 0 !important;
+  }
+
+  /* Hide arrows */
+  .service-carousel .owl-nav {
+      display: none !important;
+  }
+
+  /* Optional: Hide dots also (remove if you want dots visible) */
+  .service-carousel .owl-dots {
+      display: none !important;
+  }
+
+  /* Make items stretch edge to edge */
+  .service-carousel .owl-stage-outer {
+      padding: 0 !important;
   }
 }
 
