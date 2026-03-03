@@ -508,7 +508,38 @@ p {
   font-size: 1rem;
   transition: all 0.3s ease;
 }
+/* Remove default bullets only for tick-list */
+.tick-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
 
+.tick-list li {
+	position: relative;
+	padding-left: 27px;
+	margin-bottom: 12px;
+	font-size: 18px;
+}
+
+/* Yellow tick box */
+.tick-list li::before {
+	content: "\f00c";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	position: absolute;
+	left: 0;
+	top: 9px;
+	width: 18px;
+	height: 18px;
+	background: #FFC107;
+	color: #000;
+	border-radius: 6px;
+	font-size: 11px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .social-circle:hover {
   background: var(--brand-gold);
   color: var(--brand-navy);
