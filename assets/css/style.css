@@ -160,7 +160,9 @@ p {
   display: inline-flex;
   align-items: center;
 }
-
+.header-call-btn i {
+  -webkit-text-stroke: 1px currentColor;
+}
 .header-call-btn:hover {
   background-color: #fff;
   color: var(--brand-navy) !important;
@@ -169,7 +171,7 @@ p {
 }
 
 .header-call-btn i {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 /* Ensure container alignment */
@@ -678,7 +680,7 @@ p {
   border: 2px solid var(--brand-navy);
   font-size: 0.85rem;
   padding: 10px 15px;
-  transition: all 0.1s ease;
+  /* transition: all 0.1s ease; */
   border-radius: 20px;
   text-transform: uppercase;
 }
