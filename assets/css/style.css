@@ -67,8 +67,8 @@ p {
 
 /* --- HEADER & NAVBAR --- */
 .navbar-custom {
-  background: var(--brand-navy);
-  padding: 0;
+	background: linear-gradient(135deg, var(--brand-navy), var(--brand-blue-royal));
+    padding: 0;
 }
 
 .navbar-brand img {
@@ -95,8 +95,9 @@ p {
 }
 
 .navbar-custom .nav-item.active .nav-link {
-  background: var(--brand-blue-bright);
-  border-bottom: 4px solid var(--brand-gold);
+  background: var(--brand-gold);
+  /* border-bottom: 4px solid #fff; */
+  color: var(--brand-navy) !important;
 }
 
 .navbar-toggler {
@@ -142,6 +143,39 @@ p {
 }
 
 /* --- HEADER CONTACT (WhatsApp Highlight) --- */
+/* --- HEADER CALL BUTTON --- */
+.header-call-btn {
+  background-color: var(--brand-gold); /* Using brand gold */
+  color: var(--brand-navy) !important; /* Navy text for contrast */
+  font-weight: 800;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  border: 2px solid var(--brand-gold);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 183, 0, 0.2);
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-call-btn:hover {
+  background-color: #fff;
+  color: var(--brand-navy) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 183, 0, 0.3);
+}
+
+.header-call-btn i {
+  font-size: 0.9rem;
+}
+
+/* Ensure container alignment */
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end !important;
+  justify-content: center;
+}
 .header-contact {
   display: flex;
   flex-direction: column;
@@ -253,6 +287,7 @@ p {
   justify-content: center;
   text-align: center;
   font-size: 0.95rem;
+  font-weight: 500 !important;
   line-height: 1.3;
   background: var(--brand-blue-royal) !important;
   color: var(--brand-white) !important;
@@ -265,8 +300,8 @@ p {
 }
 
 .service-carousel .castle-card .card-title {
-  background-color: #fff !important;
-  color: var(--brand-blue-royal) !important;
+  background-color: #F84C2A !important;
+  color: #FFF364 !important;
   border-radius: 0 0 15px 15px;
   text-transform: uppercase;
 }
@@ -324,14 +359,248 @@ p {
 }
 .owl-theme .owl-dots .owl-dot.active span {
   background: var(--brand-navy);
-}
+}/* ===========================================
+   PREMIUM BANNER – COMPLETE FINAL VERSION
+=========================================== */
+
 .dotted-info-box {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-  border: 2.5px dashed var(--brand-blue-mid);
-  border-radius: 25px;
-  padding: 30px;
-  margin: 40px 0;
+  position: relative;
+  border-radius: 35px;
+  padding: 70px 50px;
+  margin: 60px 0;
+  overflow: hidden;
+
+  background: linear-gradient(90deg, #EAF2F8 0%, #F7F3F0 50%, #F6EDE8 100%);
+
+  box-shadow:
+    0 25px 60px rgba(8, 47, 82, 0.15),
+    inset 0 0 60px rgba(255,255,255,0.7);
+}
+
+/* Dashed Border */
+.dotted-info-box::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 3px dashed #0B3A66;
+  border-radius: 28px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Decorative Layer */
+.decor-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Content above decorations */
+.content {
+  position: relative;
+  z-index: 5;
+}
+
+/* ===========================================
+   HEADING + TEXT (MATCH IMAGE)
+=========================================== */
+
+.banner-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0B3A66;
+  line-height: 1.3;
+}
+
+.banner-title .gold-word {
+  color: #FFB700;
+}
+
+.banner-sub {
+  font-size: 1.15rem;
+  color: #6c757d;
+  max-width: 850px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+/* ===========================================
+   BALLOONS
+=========================================== */
+
+.balloon {
+  position: absolute;
+  width: 95px;
+  height: 125px;
+  border-radius: 50% 50% 45% 45%;
+  opacity: 0.32;
+}
+
+.balloon-left {
+  left: 45px;
+  top: 60px;
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255,255,255,0.95) 5%,
+    rgba(180,210,255,0.8) 40%,
+    rgba(120,170,230,0.6) 100%);
+}
+
+.balloon-right {
+  right: 60px;
+  bottom: 70px;
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255,255,255,0.95) 5%,
+    rgba(255,220,120,0.8) 40%,
+    rgba(255,183,0,0.6) 100%);
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -85px;
+  left: 50%;
+  width: 1.5px;
+  height: 85px;
+  background: rgba(0,0,0,0.2);
+  transform: translateX(-50%);
+}
+
+/* ===========================================
+   STARS
+=========================================== */
+
+.star {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%,
+    68% 57%, 79% 91%,
+    50% 70%, 21% 91%,
+    32% 57%, 2% 35%,
+    39% 35%
+  );
+  opacity: 0.9;
+}
+
+.s1 { top: 50px; left: 25%; background: #FFD166; }
+.s2 { top: 120px; right: 20%; background: #0F4C81; }
+.s3 { bottom: 110px; left: 35%; background: #FF6B6B; }
+.s4 { bottom: 70px; right: 30%; background: #FFB700; }
+.s5 { top: 180px; left: 15%; background: #FFD166; }
+
+/* ===========================================
+   CONFETTI
+=========================================== */
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 18px;
+  border-radius: 3px;
+  transform: rotate(25deg);
+  opacity: 0.95;
+}
+
+.c1 { top: 80px; right: 35%; background: #FFB700; }
+.c2 { top: 140px; left: 15%; background: #FF6B6B; }
+.c3 { bottom: 95px; right: 22%; background: #0F4C81; }
+.c4 { bottom: 60px; left: 30%; background: #FFD166; }
+.c5 { top: 200px; right: 15%; background: #FF6B6B; }
+
+/* ===========================================
+   GOLD GLOSSY BUTTON (MATCH IMAGE)
+=========================================== */
+
+.banner-btn {
+	display: inline-block;
+	padding: 15px 40px;
+	font-weight: 800;
+	font-size: 1.2rem;
+	border-radius: 60px;
+	text-decoration: none;
+	color: #0B3A66;
+	position: relative;
+margin-bottom: 20px;
+	border: none;
+	background: linear-gradient(180deg, #FFD84D 0%, #FFB700 100%);
+	box-shadow: 0 12px 25px rgba(255,183,0,0.35), inset 0 3px 6px rgba(255,255,255,0.8), inset 0 -3px 6px rgba(0,0,0,0.08);
+	transition: all 0.3s ease;
+}
+
+/* Inner dotted effect like screenshot */
+.banner-btn::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 60px;
+  border: 2px dashed rgba(255,255,255,0.6);
+  pointer-events: none;
+}
+
+.banner-btn:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 18px 35px rgba(255,183,0,0.45),
+    inset 0 4px 8px rgba(255,255,255,0.9);
+}
+
+/* ===========================================
+   CONTACT LINKS
+=========================================== */
+
+.dotted-info-box .row a {
+  font-size: 1.1rem;
+  color: #0B3A66 !important;
+  font-weight: 700;
+}
+
+.dotted-info-box .row i {
+  color: #0B3A66;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media (max-width: 768px) {
+
+  .dotted-info-box {
+    padding: 40px 20px;
+    border-radius: 25px;
+  }
+
+  .dotted-info-box::before {
+    inset: 12px;
+  }
+
+  .banner-title {
+    font-size: 1.6rem;
+  }
+
+  .banner-sub {
+    font-size: 1rem;
+  }
+
+  .balloon-left,
+  .balloon-right {
+    width: 60px;
+    height: 80px;
+  }
+
+  .balloon-left {
+    left: 20px;
+  }
+
+  .balloon-right {
+    right: 20px;
+  }
+
+  .banner-btn {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
 }
 
 /* --- SIDEBAR & FEATURED PRODUCTS --- */
@@ -418,21 +687,78 @@ p {
   color: var(--brand-navy) !important;
   transform: translateY(-2px);
 }
-.why-choose-us .col-md-6 > div {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+/* --- ENHANCED WHY CHOOSE US --- */
+.why-card {
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #fff;
 }
 
-.why-choose-us .col-md-6 > div:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12) !important;
+/* Base Card Borders and Icon Colors */
+.why-navy { border-bottom: 5px solid var(--brand-navy); }
+.why-navy i { color: var(--brand-navy); }
+
+.why-gold { border-bottom: 5px solid var(--brand-gold); }
+.why-gold i { color: var(--brand-gold); }
+
+.why-rose { border-bottom: 5px solid #E9B1C7; }
+.why-rose i { color: #E9B1C7; }
+
+.why-orange { border-bottom: 5px solid #F84C2A; }
+.why-orange i { color: #F84C2A; }
+
+/* Hover States - Background Fills with Your Colors */
+.why-card:hover {
+  transform: translateY(-12px);
+  color: #fff !important;
 }
 
+.why-card:hover p {
+  color: #fff !important;
+}
 
+.why-card:hover i {
+  color: #fff !important;
+}
+
+.why-navy:hover { background: var(--brand-navy); }
+.why-gold:hover { background: var(--brand-gold); color: var(--brand-navy) !important; }
+/* Gold card text turns navy on hover for readability */
+.why-gold:hover i, .why-gold:hover h5, .why-gold:hover p { color: var(--brand-navy) !important; }
+
+.why-rose:hover { background: #E9B1C7; }
+.why-orange:hover { background: #F84C2A; }
+
+.section-main-title {
+  color: var(--brand-navy);
+  font-family: 'Lexend', sans-serif;
+}
 
 .fresh-glass-footer {
   background: linear-gradient(135deg, var(--brand-navy), var(--brand-blue-royal));
+  position: relative;
   padding: 60px 0 25px;
   color: var(--brand-white);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Position the star toward the right with specific opacity */
+.fresh-glass-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0; /* Align to the right edge */
+  bottom: 0;
+  width: 100%;
+  background-image: url("https://www.corkparties.com/wp-content/uploads/2024/04/Star.png");
+  /* Offset from center toward the right (430px 24px) */
+  background-position: right 10% center; 
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.41; /* Opacity from Elementor settings */
+  z-index: -1;
+  pointer-events: none; /* Prevents the image from blocking link clicks */
 }
 
 .footer-logo {
