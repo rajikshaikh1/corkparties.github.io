@@ -556,7 +556,6 @@ p {
     max-height: none; 
     overflow-y: scroll; 
     padding: 15px !important;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
     z-index: 1050;
   }
@@ -584,7 +583,6 @@ p {
     text-align: center !important;
     padding-top: 15px;
     margin-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .phone-highlight {
