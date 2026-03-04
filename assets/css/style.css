@@ -1014,8 +1014,7 @@ color: var(--brand-white);
 }
 
 .sidebar-box h5 {
-    background: var(--brand-blue-royal);
-    color: #fff;
+background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
     margin: 0;
     padding: 12px 15px;
     font-size: 1rem;
