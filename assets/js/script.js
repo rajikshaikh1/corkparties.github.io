@@ -124,3 +124,56 @@ $(document).ready(function() {
         nextImg.addClass('active-thumb');
     });
 });
+
+$(document).ready(function(){
+    // Popular Add-Ons Slider
+    $(".addon-slider").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        dots: false,
+        nav: true
+    });
+
+    // Image Swapper
+    $('.thumb-item').on('click', function(){
+        const newSrc = $(this).attr('src');
+        $('#mainProductImage').attr('src', newSrc);
+        $('.thumb-item').removeClass('active-thumb');
+        $(this).addClass('active-thumb');
+    });
+});
+
+
+const thumbs = document.querySelectorAll(".thumb-item");
+const mainImage = document.getElementById("mainProductImage");
+
+let currentIndex = 0;
+
+function updateImage(index){
+    mainImage.src = thumbs[index].src;
+
+    thumbs.forEach(t => t.classList.remove("active-thumb"));
+    thumbs[index].classList.add("active-thumb");
+
+    currentIndex = index;
+}
+
+thumbs.forEach((thumb, i)=>{
+    thumb.addEventListener("click", ()=>{
+        updateImage(i);
+    });
+});
+
+document.querySelector(".main-next").addEventListener("click", ()=>{
+    let next = currentIndex + 1;
+    if(next >= thumbs.length) next = 0;
+    updateImage(next);
+});
+
+document.querySelector(".main-prev").addEventListener("click", ()=>{
+    let prev = currentIndex - 1;
+    if(prev < 0) prev = thumbs.length - 1;
+    updateImage(prev);
+});
