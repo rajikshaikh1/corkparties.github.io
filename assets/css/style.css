@@ -1,7 +1,12 @@
 :root {
-	--brand-blue-mid: #1F4E79;
-	--brand-blue-royal: #1F4E79;
-	--brand-blue-bright: #1F4E79;
+	--brand-blue-mid: #15446F;
+	--brand-blue-royal: #15446F;
+	--brand-blue-bright: #15446F;
+
+	/* --brand-blue-mid: #0B3F6F;
+	--brand-blue-royal: #0B3F6F;
+	--brand-blue-bright: #0B3F6F; */
+
 	--brand-gold: #FFB700;
 	--brand-gold-light: #FFCC33;
 	--brand-bg-soft: #F3F7FB;
