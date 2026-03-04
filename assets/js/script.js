@@ -177,3 +177,5 @@ document.querySelector(".main-prev").addEventListener("click", ()=>{
     if(prev < 0) prev = thumbs.length - 1;
     updateImage(prev);
 });
+
+

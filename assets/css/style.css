@@ -22,6 +22,7 @@ html {
 }
 
 body {
+	overflow-x: hidden;
 	font-family: "Lexend", sans-serif;
 	margin: 0;
 	min-height: 100vh;
@@ -33,7 +34,7 @@ body {
 }
 
 p,label {
-	color: rgba(8, 47, 82, 0.75) !important;
+	color: rgb(21, 68, 111) !important;
 }
 
 .get-in-touch-page strong,.get-in-touch-page label {
@@ -109,6 +110,8 @@ h2 {
 h1 {
   display: flex;
   align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
   text-transform: capitalize !important;
 }
 
@@ -118,11 +121,12 @@ h1::before {
   margin-right: 20px;
   background: var(--brand-gold);
   border-radius: 2px;
+  flex-shrink: 0;
 }
 
 p {
 	font-family: "Lexend", sans-serif;
-	color: rgba(8, 47, 82, 0.75) !important;
+	color: rgb(21, 68, 111) !important;
 	line-height: 1.8;
 	font-size: 1.05rem;
 	margin-bottom: 1.5rem;
@@ -174,7 +178,7 @@ ul {
 }
 
 .home-text-section ul {
-	padding-left: 1rem !important;
+	padding-left: 0 !important;
 }
 
 .home-text-section ul li {
@@ -1093,6 +1097,7 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 /* Responsive */
 @media (max-width: 991px) {
+	
     .styled-contact-form .form-group {
         flex-direction: column;
     }
@@ -1342,8 +1347,8 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 /* POPULAR BADGE */
 .product-page .popular-badge{
-    background:var(--brand-blue-royal);
-    color:var(--brand-gold-light);
+    background:var(--brand-gold-light);
+    color:var(--brand-blue-royal);
     font-size:0.8rem;
     padding:6px 14px;
     border-radius:30px;
@@ -1910,6 +1915,17 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 @media (max-width: 991px) {
 	
+	.featured-header .header-icon-box {
+	width: 42px;
+	height: 42px;
+	position: relative;
+	top: 10px;
+	background-color: var(--brand-blue-royal);
+	border-bottom: 3px solid var(--brand-gold);
+}
+	.featured-header .header-icon-box i{
+		font-size: 18px !important;
+	}
     .cta-btns {
         flex-direction: column;
     }
@@ -1994,14 +2010,24 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 }
 }
 @media (max-width: 768px) {
-
+	.decor-layer{
+		display: none;
+	}
+	.dotted-info-box::before{
+		inset: 0;
+	}
 	.fresh-glass-footer::before {
-		background-size: 200px;
+		background-size: 400px;
 		background-position: center bottom;
 	}
-
+	.contact-info-list li{
+		justify-content: center;
+	}
+	.footer-links{
+		margin: 0 20px;
+	}
 	.dotted-info-box {
-		padding: 40px 25px;
+		padding: 20px 15px;
 		border-radius: 25px;
 	}
 
