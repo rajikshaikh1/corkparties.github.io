@@ -1342,8 +1342,8 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 /* POPULAR BADGE */
 .product-page .popular-badge{
-    background:#e63946;
-    color:#fff;
+    background:var(--brand-blue-royal);
+    color:var(--brand-gold-light);
     font-size:0.8rem;
     padding:6px 14px;
     border-radius:30px;
@@ -1371,6 +1371,8 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 .product-page .main-img img {
     width: 100%;
+    max-height: 500px;
+    object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
