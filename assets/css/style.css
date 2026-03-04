@@ -902,17 +902,19 @@ background: linear-gradient(135deg, #15446F, #2F6FA3);	color: var(--brand-white)
 	gap: 15px;
 }
 
-.get-in-touch-page  .contact-info-list li {
+.get-in-touch-page .contact-info-list li{
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    gap: 12px;
+	margin: 15px 0;
 }
-
-.get-in-touch-page  .contact-info-list i {
+.get-in-touch-page .contact-info-list li a{
+    word-break: break-word;
+}
+.get-in-touch-page .contact-info-list i{
     width: 35px;
     height: 35px;
+    min-width: 35px; /* prevents shrinking on mobile */
     background: var(--brand-blue-royal);
     color: #fff;
     border-radius: 50%;
@@ -1692,16 +1694,9 @@ background: linear-gradient(135deg, #15446F, #2F6FA3);	color: var(--brand-white)
     color: var(--brand-blue-royal);
 }
 
-.about-page .cta-btns {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
 
 
-.about-page .cta-btns i{
-    font-size: 18px;
-}
+
 .about-page hr {
     margin: 40px 0;
     opacity: 0.1;
@@ -1880,10 +1875,13 @@ background: linear-gradient(135deg, #15446F, #2F6FA3);	color: var(--brand-white)
 
 @media (max-width: 991px) {
 	
-    .product-page .cta-btns {
+    .cta-btns {
         flex-direction: column;
     }
 
+	.cta-btns .btn-fb{
+		margin-bottom: 10px;
+	}
 	.navbar-brand img {
 		height: 60px;
 	}
