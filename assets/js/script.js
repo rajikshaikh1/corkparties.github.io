@@ -88,3 +88,39 @@ $(document).ready(function(){
     }
   });
 });
+
+$(document).ready(function() {
+    // Thumbnail Click Functionality
+    $('.thumbnail-slider img').on('click', function() {
+        const newSrc = $(this).attr('src');
+        
+        // Update yellow border
+        $('.thumbnail-slider img').removeClass('active-thumb');
+        $(this).addClass('active-thumb');
+
+        // Swap main image
+        $('.main-img img').fadeOut(200, function() {
+            $(this).attr('src', newSrc).fadeIn(200);
+        });
+    });
+
+    // Arrow Navigation logic (updates border as you cycle)
+    $('.fa-chevron-right, .fa-chevron-left').on('click', function() {
+        const images = $('.thumbnail-slider img');
+        const currentMain = $('.main-img img').attr('src');
+        let index = images.map((i, img) => $(img).attr('src')).get().indexOf(currentMain);
+        
+        if($(this).hasClass('fa-chevron-right')) {
+            index = (index + 1) % images.length;
+        } else {
+            index = (index - 1 + images.length) % images.length;
+        }
+        
+        const nextImg = $(images[index]);
+        $('.main-img img').attr('src', nextImg.attr('src'));
+        
+        // Update yellow border for arrows
+        $('.thumbnail-slider img').removeClass('active-thumb');
+        nextImg.addClass('active-thumb');
+    });
+});
