@@ -51,6 +51,38 @@ h6 {
 	text-transform: capitalize !important;
 	line-height: 1.2;
 }
+/* Base fields */
+input,
+textarea,
+select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 12px;
+    width: 100%;
+    transition: all 0.25s ease;
+}
+
+/* Focus state */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--brand-blue-royal) !important;
+    box-shadow: none !important;
+}
+
+/* Bootstrap support */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--brand-blue-royal) !important;
+    box-shadow: none !important;
+}
+
+/* Optional: placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    color: #999  !important;
+}
 
 h1 {
 	font-size: 2.1rem;
