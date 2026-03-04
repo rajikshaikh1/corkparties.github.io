@@ -46,6 +46,7 @@ h6 {
 	font-family: "Lexend", sans-serif;
 	color: var(--brand-blue-royal);
 	font-weight: 800;
+	text-transform: capitalize !important;
 	line-height: 1.2;
 }
 
@@ -109,16 +110,14 @@ p {
     box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
-
 .btn-fb { 
-    background: linear-gradient(135deg, #15446F, #2F6FA3);
+    background: linear-gradient(to bottom, #15446F, #2F6FA3);
 }
 
 .btn-wa { 
-    background: linear-gradient(135deg, var(--brand-gold), #f3c95b);
+    background: linear-gradient(to bottom, var(--brand-gold), #f3c95b);
     color: #15446F !important;
 }
-
 .btn-fb:hover,
 .btn-wa:hover {
     transform: translateY(-3px);
@@ -435,7 +434,7 @@ ul {
 	background-color: #F84C2A !important;
 	color: #FFF364 !important;
 	border-radius: 0 0 15px 15px;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 
@@ -717,7 +716,8 @@ ul {
 }
 
 .products-sidebar .sidebar-title {
-background: linear-gradient(135deg, #15446F, #2F6FA3);	color: var(--brand-white);
+background: linear-gradient(135deg, #15446F, #2F6FA3);	
+color: var(--brand-white);
 	font-weight: 700;
 	padding: 14px 18px;
 	font-size: 1rem;
@@ -781,7 +781,7 @@ background: linear-gradient(135deg, #15446F, #2F6FA3);	color: var(--brand-white)
 	padding: 10px 15px;
 	/* transition: all 0.1s ease; */
 	border-radius: 20px;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .featured-products-wrapper .cta-button:hover {
