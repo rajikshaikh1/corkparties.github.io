@@ -32,11 +32,13 @@ body {
 	background-attachment: fixed;
 }
 
-p,label,strong {
+p,label {
 	color: rgba(8, 47, 82, 0.75) !important;
 }
 
-
+.get-in-touch-page strong,.get-in-touch-page label {
+	color: var(--brand-blue-royal) !important;
+}
 h1,
 h2,
 h3,
