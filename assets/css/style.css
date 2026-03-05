@@ -969,7 +969,6 @@ color: var(--brand-white);
 .get-in-touch-page .contact-info-list a {
     text-decoration: none;
     color: var(--brand-blue-royal);
-    font-weight: 800;
 }
 
 /* Form Styling */
