@@ -1837,9 +1837,11 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 	margin-bottom: 8px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
+footer .contact-info-list li  {
+		justify-content: center;
 
+}
 .footer-link-group {
 	text-align: left;
 	display: inline-block;
