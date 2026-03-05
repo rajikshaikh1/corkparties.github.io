@@ -461,5 +461,48 @@
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" 
          src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"></script>
+         <script>
+document.querySelectorAll(".styled-contact-form input, .styled-contact-form textarea").forEach(function(field){
+
+    let touched = false;
+
+    field.addEventListener("focus", function(){
+        touched = true;
+    });
+
+    field.addEventListener("blur", function(){
+
+        if(!touched) return;
+
+        let value = field.value.trim();
+
+        // Required fields
+        if(field.hasAttribute("required") && value === ""){
+            field.setCustomValidity("Please fill out this field.");
+        }
+
+        // Phone empty
+        else if(field.name === "phone" && value === ""){
+            field.setCustomValidity("Please enter your phone number.");
+        }
+
+        // Phone invalid
+        else if(field.name === "phone" && !/^[0-9+\s\-()]{7,15}$/.test(value)){
+            field.setCustomValidity("Please enter a valid phone number.");
+        }
+
+        else{
+            field.setCustomValidity("");
+        }
+
+        field.reportValidity();
+    });
+
+    field.addEventListener("input", function(){
+        field.setCustomValidity("");
+    });
+
+});
+</script>
    </body>
 </html>

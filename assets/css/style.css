@@ -1019,18 +1019,19 @@ color: var(--brand-white);
     display: flex;
     align-items: center;
     justify-content: center;
+	transition: all 0.2s ease;
 }
 
 /* LEFT */
 
 .sidebar-box .addon-slider .owl-nav .owl-prev {
-    left: -4.75px;
+    left: 5px;
 }
 
 /* RIGHT */
 
 .sidebar-box .addon-slider .owl-nav .owl-next {
-    right: -4.75px;
+    right: 5px;
 }
 
 /* HOVER */
