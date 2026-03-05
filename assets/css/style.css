@@ -2224,7 +2224,6 @@ footer .contact-info-list li  {
         margin: 0 !important;
         border: none !important;
         background: rgba(0, 0, 0, 0.08) !important; /* Slight dark tint for nesting */
-        padding-left: 20px !important; /* Indent child items */
         box-shadow: none !important;
     }
 
