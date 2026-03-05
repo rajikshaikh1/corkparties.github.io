@@ -1838,10 +1838,7 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 	display: flex;
 	align-items: center;
 }
-footer .contact-info-list li  {
-		justify-content: center;
 
-}
 .footer-link-group {
 	text-align: left;
 	display: inline-block;
@@ -1923,6 +1920,10 @@ footer .contact-info-list li  {
 	margin-top: 0;
 	margin-bottom: 0;
 	color: var(--brand-blue-royal);
+}
+footer .contact-info-list li  {
+		justify-content: center;
+
 }
 .why-choose-us h2{
 	margin-top: 0.75rem;
