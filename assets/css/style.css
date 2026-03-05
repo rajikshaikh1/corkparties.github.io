@@ -414,7 +414,11 @@ ul {
 	display: block;
 	height: 100%;
 }
+.anchor-link{
+		color: var(--brand-blue-royal);
+	text-decoration: none;
 
+}
 .castle-card {
 	display: flex;
 	flex-direction: column;
@@ -432,19 +436,18 @@ ul {
 }
 
 .castle-card .product-img {
-	width: 100%;
-	aspect-ratio: 4 / 3;
-	overflow: hidden;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
 }
 
 .castle-card .product-img img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	display: block;
-	transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
-
 .castle-card:hover .product-img img {
 	transform: scale(1.15);
 }
@@ -965,7 +968,7 @@ color: var(--brand-white);
 
 .get-in-touch-page .contact-info-list a {
     text-decoration: none;
-    color: var(--brand-navy);
+    color: var(--brand-blue-royal);
     font-weight: 600;
 }
 
@@ -1010,10 +1013,10 @@ color: var(--brand-white);
     transform: translateY(-50%);
     background: var(--brand-blue-mid) !important;
     color: #fff !important;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    font-size: 16px !important;
+    font-size: 14px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1022,13 +1025,13 @@ color: var(--brand-white);
 /* LEFT */
 
 .sidebar-box .addon-slider .owl-nav .owl-prev {
-    left: 10px;
+    left: -20px;
 }
 
 /* RIGHT */
 
 .sidebar-box .addon-slider .owl-nav .owl-next {
-    right: 10px;
+    right: -20px;
 }
 
 /* HOVER */
@@ -1089,7 +1092,6 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 .popular-product p {
     font-size: 0.9rem;
     margin: 0;
-    text-align: justify;
 }
 
 /* Responsive */
@@ -1355,7 +1357,7 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 .product-page .rating-text {
     font-weight: 600;
-    color: #666;
+    color: var(--brand-blue-royal);
     margin-left: 8px;
 }
 
@@ -1366,7 +1368,7 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
 
 .product-page .product-size {
     font-weight: 600;
-    color: #666;
+    color: var(--brand-blue-royal);
 }
 
 /* MAIN IMAGE */
@@ -1731,13 +1733,40 @@ background: linear-gradient(to top, #15446F, #2F6FA3);    color: #fff;
     color: var(--brand-blue-royal);
 }
 
-
-.sidebar-box img {
-	width: 100%;
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
+/* Carousel container */
+.addon-slider {
+    width: 100%;
+    position: relative;
 }
 
+/* Hide anything outside the viewport */
+.addon-slider .owl-stage-outer {
+    overflow: hidden !important;
+}
+
+/* Ensure slides don't shrink */
+.addon-slider .owl-item {
+    margin: 0 !important;
+}
+
+/* Fix possible transform rounding gap */
+.addon-slider .owl-stage {
+    left: 0 !important;
+}
+
+/* Image styling */
+.sidebar-box img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* Prevent overflow */
+.sidebar-box {
+    overflow: hidden;
+}
+.addon-slider .owl-item:not(.active) { opacity: 0; }
 .about-page hr {
     margin: 40px 0;
     opacity: 0.1;
@@ -1935,7 +1964,7 @@ footer .contact-info-list li  {
 	margin-bottom: 30px !important;
 }
 	.featured-header .header-icon-box {
-	width: 42px;
+	width: 50px !important;
 	height: 42px;
 	position: relative;
 	top: 3px;
@@ -2184,4 +2213,31 @@ footer .contact-info-list li  {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+@media (max-width: 991px) {
+    /* Force nested dropdowns to stack instead of floating */
+    .dropdown-submenu .dropdown-menu {
+        display: none; 
+        position: static !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        background: rgba(0, 0, 0, 0.08) !important; /* Slight dark tint for nesting */
+        padding-left: 20px !important; /* Indent child items */
+        box-shadow: none !important;
+    }
+
+    /* Show when the 'show' class is toggled by JS */
+    .dropdown-submenu .dropdown-menu.show {
+        display: block !important;
+    }
+
+    /* Rotate the arrow icon on the toggle when open */
+    .dropdown-submenu > .dropdown-toggle::after {
+        transition: transform 0.3s ease;
+    }
+    .dropdown-submenu > .dropdown-toggle.show::after {
+        transform: rotate(90deg);
+    }
 }

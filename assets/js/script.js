@@ -1,3 +1,30 @@
+ $(document).ready(function() {
+    // 1. Target the SUBMENU toggles specifically
+    $('.dropdown-submenu > .dropdown-toggle').on("click", function(e) {
+        if (window.innerWidth < 992) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Get the specific menu linked to THIS button
+            const $targetMenu = $(this).next('.dropdown-menu');
+            
+            // Toggle only this one
+            $targetMenu.toggleClass('show');
+            $(this).toggleClass('show');
+            
+            // Close other open sub-menus in the same parent list
+            $(this).parent().siblings().find('.dropdown-menu').removeClass('show');
+            $(this).parent().siblings().find('.dropdown-toggle').removeClass('show');
+        }
+    });
+
+    // 2. Fix: Prevent the parent 'Event Hire' menu from closing when clicking sub-items
+    $('.dropdown-submenu').on("click", function(e) {
+        if (window.innerWidth < 992) {
+            e.stopPropagation();
+        }
+    });
+});
  const dot = document.getElementById('cursor-dot');
         const ring = document.getElementById('cursor-ring');
         const body = document.body;
@@ -127,14 +154,20 @@ $(document).ready(function() {
 
 $(document).ready(function(){
     // Popular Add-Ons Slider
-    $(".addon-slider").owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        dots: false,
-        nav: true
-    });
+   $(".addon-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 0,
+    stagePadding: 0,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    dots: false,
+    nav: true,
+    navText: [
+        '<i class="fa-solid fa-chevron-left"></i>',
+        '<i class="fa-solid fa-chevron-right"></i>'
+    ]
+});
 
     // Image Swapper
     $('.thumb-item').on('click', function(){
