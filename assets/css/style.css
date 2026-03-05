@@ -1009,7 +1009,7 @@ color: var(--brand-white);
 
 .sidebar-box .addon-slider .owl-nav button {
     position: absolute;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     background: var(--brand-blue-mid) !important;
     color: #fff !important;
@@ -1025,13 +1025,13 @@ color: var(--brand-white);
 /* LEFT */
 
 .sidebar-box .addon-slider .owl-nav .owl-prev {
-    left: -21px;
+    left: -4.75px;
 }
 
 /* RIGHT */
 
 .sidebar-box .addon-slider .owl-nav .owl-next {
-    right: -21px;
+    right: -4.75px;
 }
 
 /* HOVER */
