@@ -154,13 +154,14 @@ $(document).ready(function() {
 
 $(document).ready(function(){
     // Popular Add-Ons Slider
-   $(".addon-slider").owlCarousel({
+  $(".addon-slider").owlCarousel({
     items: 1,
     loop: true,
     margin: 0,
     stagePadding: 0,
     autoplay: true,
-    autoplayTimeout: 3000,
+    autoplayTimeout: 5000,   // time between slides
+    smartSpeed: 800,        // slide transition speed
     dots: false,
     nav: true,
     navText: [
@@ -168,7 +169,6 @@ $(document).ready(function(){
         '<i class="fa-solid fa-chevron-right"></i>'
     ]
 });
-
     // Image Swapper
     $('.thumb-item').on('click', function(){
         const newSrc = $(this).attr('src');
